@@ -2,12 +2,9 @@ package com.example.cors
 
 import android.os.Bundle
 import android.text.method.ScrollingMovementMethod
-import android.util.Log
 import android.view.View
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.cors.ntrip.Helper
-import com.example.cors.ntrip.NTrip
 import com.example.cors.ntrip.NtripClient
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
