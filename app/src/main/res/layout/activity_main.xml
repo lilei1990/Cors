@@ -4,34 +4,8 @@
     android:layout_height="fill_parent"
     android:orientation="vertical">
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout01"
-        android:layout_width="fill_parent"
-        android:layout_height="50dp">
-
-        <TextView
-            android:id="@+id/textFix"
-            android:layout_width="wrap_content"
-            android:layout_height="fill_parent"
-            android:layout_alignParentTop="true"
-            android:padding="1sp"
-            android:text="Disconnected"
-            android:textColor="#FFFFFF"
-            android:textSize="36sp" />
-
-        <TextView
-            android:id="@+id/textInfo1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:padding="1sp"
-            android:text="-"
-            android:textColor="#FFFFFF"
-            android:textSize="36sp" />
-    </RelativeLayout>
-
-    <RelativeLayout
+    <LinearLayout
+        android:orientation="horizontal"
         android:id="@+id/RelativeLayout02"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
@@ -43,40 +17,27 @@
             android:text="Unknown"
             android:onClick="btnStartService"
             android:textSize="24sp" />
-
-        <TextView
-            android:id="@+id/textInfo2"
+        <Button
+            android:id="@+id/btnlog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/btnService"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:padding="1sp"
-            android:text="-"
-            android:textColor="#FFFFFF"
-            android:textSize="36sp" />
-    </RelativeLayout>
+            android:text="log开"
+            android:onClick="btnLogOpen"
+            android:textSize="24sp" />
+
+    </LinearLayout>
 
     <RelativeLayout
         android:id="@+id/RelativeLayout03"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
 
-        <ProgressBar
-            android:id="@+id/progressbar"
-            style="?android:attr/progressBarStyleHorizontal"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:max="4096"
-            android:maxHeight="40dip"
-            android:minHeight="40dip" />
+
 
         <TextView
             android:id="@+id/textBytes"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@id/progressbar"
-            android:layout_alignBottom="@id/progressbar"
             android:gravity="center_vertical|center_horizontal"
             android:padding="2sp"
             android:text="0 Bytes"
@@ -84,34 +45,17 @@
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <RelativeLayout
-        android:id="@+id/RelativeLayout04"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true" >
 
-        <ImageView
-            android:id="@+id/logo_image"
+        <TextView
+            android:id="@+id/textLog"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentBottom="true"
-            android:contentDescription="Lefebure Design Logo"
-            android:scaleType="fitCenter"
-           />
+            android:layout_height="wrap_content" />
 
-        <ScrollView
-            android:id="@+id/svLog"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:textColor="#FFFFFF">
-
-            <TextView
-                android:id="@+id/textLog"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Loading..."
-                android:textColor="#FFFFFF"
-                android:textSize="18sp" />
-        </ScrollView>
-    </RelativeLayout>
-
+    </ScrollView>
 </LinearLayout>
